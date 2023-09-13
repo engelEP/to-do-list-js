@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate"/>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="ContainerCenter">
+        <form class="Form" id="form-login">
+            <img src="../../assets/img/logo-smbs.png" alt="logo-SMBS" class="Form-logo">
+            <div class="Form-wrapper">
+                <h1 class="Form-title">welcome to the todo app</h1>
+            </div>
+            <div class="Form-container">
+                <div class="col-12">
+                    <label for="input-email-login" class="Form-label">Email Address</label>
+                    <input type="email" class="Form-input form-control" id="input-email-login" placeholder="Email Address" required>
+                </div>
+                <div class="col-12">
+                    <label for="input-password-login" class="Form-label">Password</label>
+                    <input type="password" class="Form-input form-control" id="input-password-login" 
+                        placeholder="***************" minlength="8" required>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="Form-button">Login</button>
+                </div>
+                <span class="Form-link">
+                    Don't have an account? <a class="Form-link" href="/pages/singUp.html">Sign Up here!</a>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

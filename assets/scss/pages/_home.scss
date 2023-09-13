@@ -1,0 +1,188 @@
+.ToDoList{
+    align-items: center;
+    display: flex;
+    font-family: $inter-font;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 30px 0;
+
+    &-user{
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        width: 100vw;
+        font-size: 12px;
+        font-weight: 400;
+        &-name{
+            margin-right: 10px;
+        }
+        &-button{
+            border: none;
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+    &-card{
+        border: 1px solid $gray;
+        border-radius: 16px;
+        display: grid;
+        gap: 30px;
+        max-width: 730px;
+        margin: auto;
+        padding: 30px;
+        width: 100%;
+    }
+    &-header{
+        align-items: center;
+        border-radius: 8px;
+        justify-content: space-between;
+        padding: 24px;
+    }
+    &-mode{
+        color: $white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &-checkMode{
+        background-color: $white;
+        &:checked{
+            border: 1px solid $white;
+            background-color: $black;
+        }
+    }
+    &-title{
+        color: $white;
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    &-input{
+        border: 1px solid $gray;
+        border-radius: 8px 0 0 8px;
+        padding: 24px;
+        width: 100%;
+        &::placeholder{
+            color: $text-gray;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        &.edit{
+            border-radius: 8px;
+            padding: 10px;
+        }
+    }
+    &-container{
+        border-radius: 8px;
+        border: 1px solid $task-gray;
+        height: 100%;
+        max-height: 380px;
+        overflow-y: scroll;
+    }
+    &-task{
+        align-items: center;
+        border: 1px solid $task-gray;
+        display: flex;
+        list-style: none;
+        padding: 12px 16px 12px 16px;
+    }
+    &-controls{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 5px;
+        padding: 0;
+    }
+    &-checkBox{
+        border-radius: 50%;
+        border: none;
+        margin-right: 10px;
+        &:checked{
+            color: $black;
+        }
+    }
+    &-checkBox:checked ~ &-text{
+        text-decoration: line-through;
+    }
+    &-text{
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+    @include media-breakpoint-down(sm) {
+        &-controls{
+            flex-direction: column;
+        }
+    }
+}
+
+.LightMode .ToDoList{
+    background-color: $white;
+
+    &-user{
+        background-color: $task-gray;
+
+        &-name, &-button{
+            color: $black;
+        }
+    }
+    &-card{
+        background-color: $little-gray;
+    }
+    &-header{
+        background-color: $gray;
+    }
+    &-container{
+        li:nth-child(odd){
+            background-color: $little-gray;
+        }
+        li:nth-child(even){
+            background-color: $white;
+        }
+    }
+    &-checkBox{
+        background-color: $black;
+    }
+    &-text{
+        color: $text-gray;
+    }
+}
+
+.DarkMode .ToDoList{
+    background-color: rgba($light-blue, .7);
+
+    &-user{
+        background-color: $blue;
+        
+        &-name, &-button{
+            color: $white;
+        }
+    }
+    &-card{
+        background-color: $blue;
+    }
+    &-header{
+        background-color: $dark-blue;
+    }
+    &-container{
+        border: none;
+        li:nth-child(odd){
+            background-color: $task-blue;
+        }
+        li:nth-child(even){
+            background-color: $light-blue;
+        }
+    }
+    &-task{
+        border: none;
+    }
+    &-checkBox{
+        background-color: $white;
+        border: 1px solid $white;
+        &:checked {
+            background-color: $gray;
+        }
+    }
+    &-text{
+        color: $white;
+    }
+}

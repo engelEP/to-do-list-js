@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate"/>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>sign Up</title>
+</head>
+<body>
+    <div class="ContainerCenter">
+        <form class="Form" id="form-signUp">
+            <img src="../../assets/img/logo-smbs.png" alt="logo-SMBS" class="Form-logo">
+            <div class="Form-wrapper smallMargin">
+                <h1 class="Form-title text-capitalize">sign up for our newsletter</h1>
+                <span class="Form-subTitle">
+                    Fill out your information below to be signed up
+                    for our informative newsletter.
+                </span>
+            </div>
+            <div class="Form-container smallGap">
+                <div class="col-12">
+                    <label for="input-name-signUp" class="Form-label">First Name</label>
+                    <input type="text" class="Form-input form-control" id="input-name-signUp" placeholder="First Name" required>
+                </div>
+                <div class="col-12">
+                    <label for="input-email-signUp" class="Form-label">Email Address</label>
+                    <input type="email" class="Form-input form-control" id="input-email-signUp" placeholder="Email Address" required>
+                </div>
+                <div class="col-12">
+                    <label for="input-password-signUp" class="Form-label">Password</label>
+                    <input type="password" class="Form-input form-control" id="input-password-signUp" 
+                        placeholder="Password" minlength="8" required>
+                </div>
+                <div class="col-12">
+                    <label class="Form-label d-block">Add me to your mailing list</label>
+                    <input type="checkbox" class="Form-checkBox form-check-input" id="input-checkBox" required>
+                    <label for="input-checkBox" class="Form-label checkLabel">I agree to receive e-mails from your company and your terms and conditions.</label>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="Form-button">sign me up</button>
+                </div>
+                <span class="Form-link">
+                    Already have an account? <a class="Form-link" href="/pages/login.html">Login here!</a>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

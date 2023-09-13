@@ -1,0 +1,65 @@
+.Button{
+    border: none;
+    border-radius: 8px;
+    color: $white;
+    padding: 15px 25px;
+    transition: all .22s ease-in-out;
+    &-add{
+        background-color: $yellow;
+        border-radius: 0 8px 8px 0;
+        font-size: 20px;
+        padding: 0;
+        &:hover{
+            background-color: rgba($yellow, 0.8);
+        }
+    }
+    &-delete{
+        background-color: $red;
+        &:hover{
+            background-color: rgba($red, 0.8);
+        }
+    }
+
+    &-logout{
+        background-color: $yellow;
+        font-size: 16px;
+        width: fit-content;
+        &:hover{
+            background-color: rgba($yellow, 0.8);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &{
+            padding: 8px 15px;
+            text-align: center;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        &-edit{
+            margin-bottom: 10px;
+        }
+        &-add{
+            padding: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.LightMode .Button{
+    &-edit{
+        background-color: $green;
+        &:hover{
+            background-color: rgba($green, 0.8);
+        }
+    }
+}
+
+.DarkMode .Button{
+    &-edit{
+        background-color: $little-green;
+        &:hover{
+            background-color: rgba($little-green, 0.8);
+        }
+    }
+}
