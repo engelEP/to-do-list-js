@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>TO DO List</title>
+</head>
+<body>
+    <div class="LightMode" id="mode">
+        <div class="ToDoList">
+            <div class="ToDoList-user">
+                <span class="ToDoList-user-name" id="todo-user">Engel</span>
+                <button class="ToDoList-user-button" id="button-logout">Logout</button>
+            </div>
+            <div class="ToDoList-card">
+                <div class="ToDoList-header row">
+                    <h1 class="ToDoList-title col-9">
+                        Todos <span id="count-todo">(0)</span>
+                    </h1>
+                    <div class="ToDoList-mode form-check form-switch col-3">
+                        <input class="form-check-input ToDoList-checkMode" id="switchCheck" type="checkbox">
+                        <label class="form-check-label" for="switchCheck">Dark mode</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9 p-0">
+                        <input autofocus type="text" class="ToDoList-input" placeholder="Enter todo here" id="input-task">
+                    </div>
+                    <button class="Button Button-add col-3" id="button-add-task">
+                        <span>Submit</span>
+                        <i class="fa-solid fa-paper-plane d-none d-sm-inline-block"></i>
+                    </button>
+                </div>
+                <ul class="ToDoList-container row p-0" id="list-container" data-id="">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/477dcc56c6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
